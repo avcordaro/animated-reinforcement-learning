@@ -1,0 +1,102 @@
+; == Policy Iteration and Value Iteration ==
+
+[dynamic-programming] 
+gamma: 0.9
+greedy_episodes: 10
+exploration_episodes: 200
+
+; == First-visit Monte Carlo Control ==
+; epsilon_decay set to true will set epsilon to epsilon^n for each episode, 
+; where n is the current episode number.
+
+[monte-carlo]
+epsilon: 0.999
+epsilon_decay: true
+episodes: 10000
+
+
+; == Q-Learning and SARSA ==
+; epsilon_decay set to true will set epsilon to epsilon^n for each episode, 
+; where n is the current episode number.
+; alpha_decay_amount is subtracted from alpha at the end of each episode. 
+; If you do not want alpha to decay, set this to 0.
+
+[temporal-difference]
+gamma: 0.9
+alpha: 0.1
+alpha_decay_amount: 0	
+epsilon: 0.01
+epsilon_decay: false
+episodes: 10000
+min_initial_Q: 0
+max_initial_Q: 0
+
+; == REINFORCE and Actor-Critic ==
+; alpha is used by REINFORCE, whilst both alpha and beta are used by Actor-Critic
+
+[policy-gradient]
+gamma: 0.99
+alpha: 0.0005
+beta: 0.2
+episodes: 2000
+
+; == Deep Q-Network for CartPole ==
+; epsilon_decay set to true will set epsilon to epsilon^n for each episode, 
+; where n is the current episode number.
+; sync_target_net_episodes set to N will sync up the network and target network
+; model parameters every N episodes. 
+
+[deep-q-network-cartpole]
+gamma: 0.99
+alpha: 0.001
+epsilon: 0.999
+epsilon_decay: true
+batch_size: 6
+episodes: 10000
+sync_target_net_episodes: 1000
+
+; == Deep Q-Network for Pong ==
+; epsilon_decay_amount will be deducted from epsilon after every frame of the environment.
+; final_epsilon is the lowest value that epsilon will be reduced to.
+; sync_target_net_frames set to N will sync up the network and target network
+; model parameters every N frames. 
+
+[deep-q-network-pong]
+gamma: 0.99
+alpha: 0.0001
+epsilon: 1.0
+epsilon_decay_amount: 0.00001
+final_epsilon: 0.02
+batch_size: 32
+episodes: 100
+sync_target_net_frames: 1000
+
+; == Deep Deterministic Policy Gradient for Lunar Lander ==
+; epsilon_decay_amount will be deducted from epsilon after every step of the environment.
+; final_epsilon is the lowest value that epsilon will be reduced to.
+
+[ddpg-lunar-lander]
+gamma: 0.99
+tau: 0.001
+alpha_actor: 0.0001
+alpha_critic: 0.001
+epsilon: 1.0
+epsilon_decay_amount: 0.000001
+final_epsilon: 0.1
+batch_size: 32
+episodes: 10000
+
+; == Deep Deterministic Policy Gradient for Bipedal Walker ==
+; epsilon_decay_amount will be deducted from epsilon after every step of the environment.
+; final_epsilon is the lowest value that epsilon will be reduced to.
+
+[ddpg-bipedal-walker]
+gamma: 0.99
+tau: 0.005
+alpha_actor: 0.001
+alpha_critic: 0.001
+epsilon: 1.0
+epsilon_decay_amount: 0.000005
+final_epsilon: 0.01
+batch_size: 100
+episodes: 10000
