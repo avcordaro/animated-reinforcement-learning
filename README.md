@@ -33,7 +33,7 @@ My MSci Project which animates an agent running in various environments, using v
 
 **Python:** 3.7.4+
 
-Open a directroy in the root folder of the repository.
+Open a directory in the root folder of the repository.
 
 Install the package dependicies using pip:
 ```
