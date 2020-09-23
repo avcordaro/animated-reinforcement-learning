@@ -45,3 +45,17 @@ Run the program:
 chmod u+x run.sh
 ./run.sh
 ```
+
+## Video Demos 
+Deep Q-Network for CartPole Environment:
+
+https://www.youtube.com/watch?v=eddZEhWoBUs&feature=youtu.be
+
+Q-Learning for Taxi Driver Environment:
+
+https://www.youtube.com/watch?v=EAe37d4bwUM
+
+
+Value Iteration for Frozen Lake Environment:
+
+https://www.youtube.com/watch?v=Q_KDa2du_mw
