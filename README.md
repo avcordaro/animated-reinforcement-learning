@@ -46,6 +46,8 @@ chmod u+x run.sh
 ./run.sh
 ```
 
+![screenshot](https://i.imgur.com/nrEl4Kg.png)
+
 ## Video Demos 
 Deep Q-Network for CartPole Environment:
 
