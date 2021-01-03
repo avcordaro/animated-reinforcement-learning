@@ -1,4 +1,6 @@
 # Animated Reinforcement Learning
+Standalone application built using Python + Tkinter + PyTorch + OpenAI Gym
+
 My MSci Project which animates an agent running in various environments, using various reinforcement learning algorithms (including Deep RL and OpenAI gym environments)
 
 #### Learning algorithms included:
